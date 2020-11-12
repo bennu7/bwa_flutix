@@ -1,6 +1,7 @@
 part of 'model.dart';
 
-class User extends Equatable {
+class ExUser extends Equatable {
+  ///menghubungkan pada firebase_user_extension
   final String id; //untuk firebase
   final String email;
   final String name;
@@ -9,8 +10,12 @@ class User extends Equatable {
   final String selectedLanguage;
   final int balance;
 
-  User(this.id, this.email, this.name, this.profilePicture, this.balance,
-      this.selectedGenres, this.selectedLanguage);
+  ExUser(this.id, this.email,
+      {this.name,
+      this.profilePicture,
+      this.balance,
+      this.selectedGenres,
+      this.selectedLanguage});
 
   @override
   List<Object> get props => [
