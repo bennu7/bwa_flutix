@@ -1,11 +1,17 @@
 part of 'extension.dart';
 
-extension FirebaseUserExtension on FirebaseUser {
+extension FirebaseUserExtension on User {
   User convertToUser(
           {String name,
           List<String> selectedGenres,
           String selectedLanguage,
-          int ballance}) =>
-      User(this.uid, this.email, name, profilePicture, ballance, selectedGenres,
-          selectedLanguage);
+          int balance}) =>
+      User(
+        this.uid,
+        this.email,
+        name,
+        balance,
+        selectedGenres,
+        selectedLanguage,
+      );
 }
