@@ -15,7 +15,7 @@ class ExUser extends Equatable {
       this.profilePicture,
       this.balance,
       this.selectedGenres,
-      this.selectedLanguage});
+      this.selectedLanguage}); //menambahkan {} untuk menjadi opsional
 
   @override
   List<Object> get props => [
