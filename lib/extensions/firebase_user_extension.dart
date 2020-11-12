@@ -2,16 +2,16 @@ part of 'extension.dart';
 
 extension FirebaseUserExtension on User {
   User convertToUser(
-          {String name,
-          List<String> selectedGenres,
-          String selectedLanguage,
-          int balance}) =>
+          {String name = "No Name",
+          List<String> selectedGenres = const [],
+          String selectedLanguage = "English",
+          int balance = 50000}) =>
       User(
         this.uid,
         this.email,
-        name,
-        balance,
-        selectedGenres,
-        selectedLanguage,
+        name: name,
+        balance: balance,
+        selectedGenres: selectedGenres,
+        selectedLanguage: selectedLanguage,
       );
 }
