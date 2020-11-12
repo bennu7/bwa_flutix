@@ -12,6 +12,12 @@ class AuthServices {
           email: email,
           password:
               password); //Mendaftarkan email & password ke firebase auth //Firebase auth akan mengembalikan firebase user, akan ada objek jika berhasil, jika tidak berhasil pada firebase ini ada kemungkinan password salah atau  email yg tidak sesuai dgn bentuk email atau email telah digunakan akan membuat createUser email & password ini akan gagal. Jika gagal firebase auth akan mengembalikan null
+
+      ExUser user = result.user.convertToUser(
+          //user harusnya terhubung ke FirebaseUser
+          name: name,
+          selectedGenres: selectedGenres,
+          selectedLanguage: selectedLanguage);
     } catch (e) {}
   }
 }
